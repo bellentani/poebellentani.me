@@ -1,0 +1,55 @@
+
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+body {
+  position: relative;
+  left: 0;
+  font-family: $font-default;
+  transition: $transition-default;
+  //font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+  @media (min-width: $screen-tablet) {
+    position: initial;
+    left: auto;
+  }
+}
+a {
+  color: $main-color;
+  transition: $transition-default;
+
+  &:hover,
+  &:focus {
+    color: darken($main-color, 20%);
+    transition: $transition-default;
+  }
+  &.main-anchor {
+    position: relative;
+    top: -90px;
+  }
+}
+main {
+  > [class^="section-"] {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+    @media (min-width: $screen-tablet) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    &:first-of-type {
+      padding: 0;
+    }
+
+    .title {
+      padding-bottom: 2.5rem;
+      color: $main-color;
+  
+      @media (min-width: $screen-tablet) {
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}
+

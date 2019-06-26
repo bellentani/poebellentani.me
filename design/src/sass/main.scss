@@ -1,0 +1,27 @@
+@import "bootstrap"; //Bootstrap personalizado já inserido
+@import "node_modules/font-awesome/scss/font-awesome";
+
+@import "project/variables";
+@import "project/mixins";
+@import "project/fonts";
+@import "project/global";
+
+
+@import "project/atoms/buttons";
+@import "project/atoms/forms";
+@import "project/atoms/typography";
+
+@import "project/molecules/service";
+@import "project/molecules/navbar";
+@import "project/molecules/team-member";
+
+@import "project/organisms/content";
+@import "project/organisms/about";
+@import "project/organisms/footer";
+@import "project/organisms/header"; 
+@import "project/organisms/banner";
+@import "project/organisms/services";
+@import "project/organisms/contact";
+@import "project/organisms/clients";
+
+@import "project/molecules/pacman";

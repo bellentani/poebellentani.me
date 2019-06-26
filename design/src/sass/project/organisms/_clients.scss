@@ -1,0 +1,12 @@
+.section-clients {
+    .brand {
+        animation-name: bounceOut;
+
+        &.bounceIn {
+            animation-name: bounceIn;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

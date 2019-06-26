@@ -1,0 +1,212 @@
+.header-main {
+  .navbar {
+    background-color: $base-light;
+    //border-bottom: 1px solid rgba($base-dark, .3);
+    padding-bottom: 0;
+
+    @media (min-width: $screen-tablet) {
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &-nav{
+      height: 100%;
+
+      .nav-item {
+        padding-left: .75rem;
+        padding-right: .75rem;
+        //border-bottom: 3px solid transparent;
+        transition: border-color .4s ease-in-out, color .4s ease-in-out;
+        position: relative;
+        top: 3px;
+
+        @media (min-width: $screen-tablet) {
+          top: 0;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: calc(50% + 10px);
+          left: 0;
+          display: block;
+          width: 0;
+          height: 4px;
+          margin: 0 1rem;
+          border-radius: 5px;
+          background-color: transparent;
+          transition: $transition-default;
+        }
+
+        &:hover,
+        &:focus {
+          color: $base-dark;
+
+          &:before {
+            width: calc(100% - 2rem);
+            background-color: rgba($main-color, .7);
+            transition: $transition-default;
+          }
+        }
+        &.active {
+          &:before {
+            width: calc(100% - 2rem);
+            background-color: rgba($main-color, .7);
+            transition: $transition-default;
+          }
+        }
+
+        .nav-link {
+          height: 100%;
+          color: $text-color;
+
+          @media (min-width: $screen-tablet) {
+            display: flex;
+            align-items: center;
+            height: $header-height;
+          }
+
+        }
+
+        &--important {
+          .nav-link {
+            color: $text-cta;
+
+            &:focus,
+            &:hover {
+              color: $text-cta;
+            }
+          }
+        }
+      }
+    }
+
+    &-brand__image {
+      display: block;
+      width: 200px;
+
+      &--sm {
+        display: none;
+        margin: 10px 1rem;
+        width: 160px;
+      }
+    }
+    &--fixed {
+      left: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+
+      .navbar-brand {
+        padding: 0;
+      }
+
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            padding-bottom: 22px;
+            padding-top: 22px;
+          }
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      .navbar {
+        &-brand__image {
+          display: none;
+
+          &--sm {
+            display: block;
+          }
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      z-index: 100;
+      background-color: rgba($base-dark, 0);
+      transition: $transition-default;
+    }
+  }
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    z-index: 100;
+    width: 70vw;
+    height: 100vh;
+    padding-top: 1rem;
+    transition: $transition-default;
+
+    @media (min-width: $screen-tablet-landscape) {
+      position: initial;
+      top: auto;
+      right: auto;
+      width: auto;
+      height: auto;
+      padding-top: 0;
+    }
+  }
+  .navbar-toggler {
+    background-color: rgba($base-light, 0);
+  }
+}
+.body--menu-opened {
+  position: relative;
+  left: -70vw;
+  overflow: hidden;
+  transition: $transition-default;
+
+  .navbar-toggler {
+    position: relative;
+    z-index: 101;
+    background-color: rgba($base-light, 1);
+  }
+  .header-main {
+    left: -70vw;
+
+    .navbar {
+      &::after {
+        width: 30vw;
+        height: 100vh;
+        background-color: rgba($base-dark, .5);
+      }
+    }
+  }
+  .navbar-collapse {
+    top: 0;
+    right: 0;
+    background-color: $base-light;
+    transition: $transition-default;
+    box-shadow: 0 0 1rem 0 rgba($base-dark, .1);
+
+    @media (min-width: $screen-tablet-landscape) {
+      position: relative;
+      top: auto;
+      box-shadow: none;
+      background-color: transparent;
+      position: initial;
+    }
+
+    @media (min-width: $screen-tablet-landscape) {
+      margin-right: -2rem;
+      margin-left: -2rem;
+    }
+    .nav-link {
+      padding: 1rem 2rem;
+
+      @media (min-width: $screen-tablet-landscape) {
+
+      }
+    }
+  }
+}

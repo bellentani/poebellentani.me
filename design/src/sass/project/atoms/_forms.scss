@@ -1,0 +1,54 @@
+.form-group {
+    label {
+        padding-left: 2px;
+        font-size: .7rem; 
+        font-weight: 600;
+        margin-bottom: .5em;
+    }
+}
+.form-control {
+    border-radius: $border-radius-default;
+    font-weight: 300;
+    border: 2px solid transparent;
+    resize: none;
+    transition: $transition-default;
+    margin-bottom: .5em;
+
+    &::placeholder {
+        font-weight: 300;
+    }
+
+    &:focus {
+        border-color: $main-color;
+        outline: none;
+        box-shadow: none;
+        transition: $transition-default;
+    }
+}
+.valid-feedback {
+    color: $color-success;
+}
+.invalid-feedback {
+    color: $color-danger;
+}
+.was-validated .form-control:valid, 
+.form-control.is-valid, 
+.was-validated .custom-select:valid, 
+.custom-select.is-valid {
+    border-color: $color-success;
+}
+.was-validated .form-control:invalid, 
+.form-control.is-invalid, 
+.was-validated .custom-select:invalid, 
+.custom-select.is-invalid {
+    border-color: $color-danger;
+}
+
+.text-help {
+    display: none;
+
+    &.valid-feedback,
+    &.invalid-feedback {
+        display: block;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    {{> head-metatags
+          canonical="https://bonsaiux.com.br/"
+          title="Bonsai UX - Consultoria em User Experience, Design de UI e Desenvolvimento de Software"
+          description="A Bonsai UX é uma consultoria de User Experience (UX) e Dev House, que tem como objetivo testar conceitos para serviços, aplicativos, sites, objetos e projetos no geral na área de tecnologia. A empresa usa o termo UX com ênfase em usabilidade, acessibilidade, SEO e Arquitetura de Informação. Estamos localizados em Sorocaba / SP."
+          keywords="UX consultant, UI design, Design Bureau, UX consultoria, User Experience, Consultoria, Design, Fábrica de Software, Dev House, Sorocaba, São Paulo"
+          title-facebook="Bonsai UX: Consultoria em User Experience, Design de UI e Desenvolvimento de Software"
+          image-itemprop="https://bonsaiux.com.br/img/bonsaiux.jpg"
+          image-facebook="https://bonsaiux.com.br/img/og-image.jpg"
+          image-twitter="https://bonsaiux.com.br/img/twitter-image.jpg"
+          author-url-facebook="https://www.facebook.com/bonsaiux"
+          author-name="Bonsai UX"
+          publisher-url-facebook="https://www.facebook.com/bonsaiux"
+    }}
+    {{> head-scripts }}
+  </head>
+  <body>
+    <main>
+      <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
+      {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
+      {{> org-header }}
+      {{> org-banner-main }}
+      {{> org-about }}
+      {{> org-services }}
+      {{> org-clients }}
+      {{> org-footer }}
+    </main>
+    {{> footer-scripts }}
+  </body>
+</html>

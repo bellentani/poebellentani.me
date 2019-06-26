@@ -1,0 +1,49 @@
+.section-about {
+    background-color: $secondary-color;
+
+    .circular-image,
+    .content-text {
+        animation-name: bounceOut;
+
+        &.bounceIn {
+            animation-name: bounceIn;
+        }
+    }
+    .circular-image {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 2.5rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media (min-width: $screen-tablet) {
+            width: 500px;
+            height: 500px;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    .content__title {
+        strong {
+            color: $base-light;
+        }
+    }
+
+    p {
+        color: $base-dark;
+        font-size: 1rem;
+
+        strong {
+            color: $base-light;
+        }
+    }
+}
+main .section-about {
+    @media (min-width: $screen-tablet) {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+}

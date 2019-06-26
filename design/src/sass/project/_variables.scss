@@ -1,0 +1,66 @@
+//Colors manual
+
+// Highlight Colors
+//
+// Colors we use for higlighting states.
+//
+// $life-green - #3DCD58, primary green
+// $logo-green - #009530, secondary green
+// $dark-gray - #626469, base gray
+//
+// Styleguide Base.colors
+
+//Primary Colors
+$orange-crazy: #F79829;
+$green-atomic: #8CC63F;
+$grafite:   #5F5F60;
+$moon-gray:   #86868D;
+$snow-white:    #F1F1F1;
+
+//Secondary Colors
+$red-blood:     #DC1616;
+$yellow-mother:   #ffd200;
+
+//Informational Colors
+$black: #000;
+$white: #fff;
+
+//Functional colors
+$main-color: $orange-crazy;
+$secondary-color: $green-atomic;
+$base-light: $white;
+$base-dark: $black;
+$background-color: $snow-white;
+$main-light: #979ca3;
+
+//Conditional colors
+$color-danger: $red-blood;
+$color-success: $green-atomic;
+$color-warning: $yellow-mother;
+
+//text-colors
+$text-color: lighten($base-dark, 10%);
+$text-light: $moon-gray;
+$text-cta: $main-color;
+$text-normal: $grafite;
+
+//Fonts
+$font-default: 'Poppins', 'Calibri', sans-serif;
+
+$border-radius-default: 4px;
+$transition-default: all .35s ease-in-out;
+
+//Size variables
+$screen-mobile: 576px;
+$screen-tablet: 768px;
+$screen-tablet-landscape: 992px;
+$screen-desktop: 1200px;
+
+//Structure sizes
+$header-height: 90px;
+
+//fonts breakes
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 14px;
+$max_font: 18px;

@@ -1,0 +1,29 @@
+.header-main {
+  top: -$header-height;
+  color: $text-light;
+  font-size: 1.125rem;
+  font-weight: 100;
+  height: $header-height;
+  transition: $transition-default;
+  background-color: $base-light;
+
+  @media (min-width: $screen-mobile) {
+  }
+  &--fixed {
+    //@media (min-width: $screen-mobile) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      background-color: $base-light;
+      transition: $transition-default;
+      box-shadow: 0 0 2rem 0 rgba($base-dark, .1);
+    //}
+  }
+}
+.body-header-fixed {
+  main:first-of-type {
+    padding-top: $header-height;
+  }
+}
