@@ -1,5 +1,5 @@
-@mixin gradient($direction,$color1,$color2) {
-  background-image: linear-gradient($direction,$color1,$color2);
+@mixin gradient($direction,$list) {
+  background: linear-gradient($direction, $list);  
 }
 
 @function strip-unit($value) {

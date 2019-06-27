@@ -18,15 +18,17 @@ $moon-gray:   #86868D;
 $snow-white:    #F1F1F1;
 
 //Secondary Colors
-$red-blood:     #DC1616;
+$red-blood:     #D9000D;
 $yellow-mother:   #ffd200;
+$blue-shinny: #0090DF;
 
 //Informational Colors
 $black: #000;
 $white: #fff;
 
 //Functional colors
-$main-color: $orange-crazy;
+$main-color: $blue-shinny;
+$primary-color: $red-blood;
 $secondary-color: $green-atomic;
 $base-light: $white;
 $base-dark: $black;
@@ -64,3 +66,5 @@ $min_width: 320px;
 $max_width: 1200px;
 $min_font: 14px;
 $max_font: 18px;
+
+$gradient-main: #173a81, #ce1b49;

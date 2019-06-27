@@ -3,53 +3,102 @@
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
-body {
-  position: relative;
-  left: 0;
-  font-family: $font-default;
-  transition: $transition-default;
-  //font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
-  @media (min-width: $screen-tablet) {
-    position: initial;
-    left: auto;
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem;
+  font-family: $font-default;
+  background-color: $main-color;
+  color: $base-light;
+  @include gradient(270deg, $gradient-main);
+  background-size: 400% 400%;
+
+
+  animation: backgroundAnimated 30s ease infinite;
+
+
+}
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: .85;
+}
+p,
+ul {
+  font-size: 2rem;
+  font-weight: 200;
+  opacity: .85;
+  
+  small {
+    font-size: .5em;
+
+    i {
+      background-color: #ff0097;
+      color: $base-light;
+      padding: .25em;
+      border-radius: .1em;
+      margin-right: .25em;
+    }
   }
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 a {
-  color: $main-color;
-  transition: $transition-default;
+  position: relative;
+  display: inline-block;
+  color: #ff0097;
+  font-weight: 600;
+  transition: all .35s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: .1em;
+    display: block;
+    width: 0;
+    height: .55em;
+    background-color: rgba(#ff0097, .5);
+    transition: all .35s ease-in-out;
+  }
+  i {
+    transition: all .35s ease-in-out;
+  }
 
   &:hover,
   &:focus {
-    color: darken($main-color, 20%);
-    transition: $transition-default;
-  }
-  &.main-anchor {
-    position: relative;
-    top: -90px;
-  }
-}
-main {
-  > [class^="section-"] {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    //font-weight: 400;
+    text-decoration: none;
+    color: $yellow-mother;
+    transition: all .35s ease-in-out;
 
-    @media (min-width: $screen-tablet) {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+    &:after {
+      width: 100%;
+      transition: all .35s ease-in-out;
     }
-    &:first-of-type {
-      padding: 0;
-    }
-
-    .title {
-      padding-bottom: 2.5rem;
-      color: $main-color;
-  
-      @media (min-width: $screen-tablet) {
-        padding-bottom: 5rem;
-      }
+    i {
+      background: darken($main-color, 20%);
+      transition: all .35s ease-in-out;
     }
   }
 }
 
+@-webkit-keyframes backgroundAnimated {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes backgroundAnimated {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes backgroundAnimated { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

@@ -41,7 +41,10 @@ const path = {
     samples: 'design/dist/samples',
     css: 'design/dist/css'
   },
-  app: 'app'
+  app: {
+    static: 'public/',
+    app: 'app/'
+  }
 };
 const files = {
   types: 'ico,jpg,png,gif,svg,ico,txt,xml,ttf,woff,woff2,eot'
@@ -78,7 +81,7 @@ var sassOptions = {
 };
 // CSS task
 var autoprefixerOptions = {
-  browsers: ['last 5 versions', '> 5%', 'Firefox ESR']
+  //overrideBrowserslist: ['last 5 versions', '> 5%', 'Firefox ESR']
 };
 function css() {
   return gulp
@@ -124,6 +127,16 @@ function copyFiles(done) {
     path.src.img+'/**/*.{png,jpg,gif,svg,ico}'
   ])
   .pipe(gulp.dest(path.dist.img))
+
+  done();
+}
+
+function deployStatic(done) {
+  gulp.src([
+    path.dist.root+'/**/*',
+    '!'+path.dist.root+'/*.+(zip|rar|psd|ai|pdf)'
+  ])
+  .pipe(gulp.dest(path.app.static));
 
   done();
 }
@@ -267,5 +280,6 @@ exports.js = js;
 exports.jekyll = jekyll;
 exports.clean = clean;
 exports.build = build;
+exports.deploy = deployStatic;
 exports.watch = watch;
 exports.default = watch;
