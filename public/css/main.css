@@ -19409,7 +19409,7 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  padding: 5rem;
+  padding: 2.5rem;
   font-family: "Poppins", "Calibri", sans-serif;
   background-color: #0090DF;
   color: #fff;
@@ -19418,11 +19418,23 @@ body {
   animation: backgroundAnimated 30s ease infinite;
 }
 
+@media (min-width: 768px) {
+  body {
+    padding: 5rem;
+  }
+}
+
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
   opacity: .85;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 p,

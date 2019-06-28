@@ -7,23 +7,27 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  padding: 5rem;
+  padding: 2.5rem;
   font-family: $font-default;
   background-color: $main-color;
   color: $base-light;
   @include gradient(270deg, $gradient-main);
   background-size: 400% 400%;
-
-
   animation: backgroundAnimated 30s ease infinite;
 
-
+  @media (min-width: $screen-tablet) {
+    padding: 5rem;
+  }
 }
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
   opacity: .85;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 5rem;
+  }
 }
 p,
 ul {
