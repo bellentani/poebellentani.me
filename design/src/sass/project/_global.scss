@@ -3,12 +3,16 @@
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
-
 body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-default;
+}
+
+.landing {
   width: 100%;
   min-height: 100vh;
   padding: 2.5rem;
-  font-family: $font-default;
   background-color: $main-color;
   color: $base-light;
   @include gradient(270deg, $gradient-main);
@@ -18,78 +22,80 @@ body {
   @media (min-width: $screen-tablet) {
     padding: 5rem;
   }
-}
-h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  opacity: .85;
 
-  @media (min-width: $screen-tablet) {
-    font-size: 5rem;
-  }
-}
-p,
-ul {
-  font-size: 2rem;
-  font-weight: 200;
-  opacity: .85;
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: .85;
   
-  small {
-    font-size: .5em;
-
-    i {
-      background-color: #ff0097;
-      color: $base-light;
-      padding: .25em;
-      border-radius: .1em;
-      margin-right: .25em;
+    @media (min-width: $screen-tablet) {
+      font-size: 5rem;
     }
   }
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-a {
-  position: relative;
-  display: inline-block;
-  color: #ff0097;
-  font-weight: 600;
-  transition: all .35s ease-in-out;
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: .1em;
-    display: block;
-    width: 0;
-    height: .55em;
-    background-color: rgba(#ff0097, .5);
-    transition: all .35s ease-in-out;
+  p,
+  ul {
+    font-size: 2rem;
+    font-weight: 200;
+    opacity: .85;
+    
+    small {
+      font-size: .5em;
+  
+      i {
+        background-color: #ff0097;
+        color: $base-light;
+        padding: .25em;
+        border-radius: .1em;
+        margin-right: .25em;
+      }
+    }
   }
-  i {
-    transition: all .35s ease-in-out;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-
-  &:hover,
-  &:focus {
-    //font-weight: 400;
-    text-decoration: none;
-    color: $yellow-mother;
+  a {
+    position: relative;
+    display: inline-block;
+    color: #ff0097;
+    font-weight: 600;
     transition: all .35s ease-in-out;
-
+  
     &:after {
-      width: 100%;
+      content: "";
+      position: absolute;
+      bottom: .1em;
+      display: block;
+      width: 0;
+      height: .55em;
+      background-color: rgba(#ff0097, .5);
       transition: all .35s ease-in-out;
     }
     i {
-      background: darken($main-color, 20%);
       transition: all .35s ease-in-out;
+    }
+  
+    &:hover,
+    &:focus {
+      //font-weight: 400;
+      text-decoration: none;
+      color: $yellow-mother;
+      transition: all .35s ease-in-out;
+  
+      &:after {
+        width: 100%;
+        transition: all .35s ease-in-out;
+      }
+      i {
+        background: darken($main-color, 20%);
+        transition: all .35s ease-in-out;
+      }
     }
   }
 }
+
 
 @-webkit-keyframes backgroundAnimated {
   0%{background-position:0% 50%}

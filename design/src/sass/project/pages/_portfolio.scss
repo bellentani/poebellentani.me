@@ -1,0 +1,172 @@
+.portfolio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: $background-color;
+
+    ul {
+        margin: 0;
+    }
+    .cta-cover {
+        &--ui {
+            bottom: 0;
+            right: 0;
+
+            &:before {
+                bottom: -60vh;
+                right: -25vh;
+                transform: rotate(45deg);
+                background-color: $main-color;
+            }
+        }
+    }
+    &--ui {
+        .poe {
+            &--red,
+            &--blue,
+            &--color {
+                transition: all .35s ease-in-out;
+            }
+            &--red,
+            &--blue {
+                opacity: 0;
+            }
+            &--color {
+                right: -7rem;
+                bottom: -3rem;
+                width: 110vh;
+                margin-right: 0;
+                opacity: 1;
+            }
+        }
+        .cta-cover {
+            &--ux {
+                top: -100vh;
+                left: 0;
+                opacity: 0;
+                transition: all .35s ease-in-out;
+
+                &:before {
+                    top: -60vh;
+                    left: -25vh;
+                    opacity: 0;
+                    transform: rotate(-90deg);
+                    transition: all .35s ease-in-out;
+                }
+            }
+            &--ui {
+                bottom: 100vh;
+                right: 0;
+    
+                &:before {
+                    bottom: -10vh;
+                    right: -40vh;
+                    transform: rotate(0deg);
+                    transition: all .35s ease-in-out;
+                }
+            }
+        }
+    }
+}
+.cta-cover {
+    display: block;
+    position: absolute;
+    font-weight: 700;
+    font-size: 13em;
+    color: $background-color;
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+    cursor: default !important;
+    opacity: .9;
+    transition: all .35s ease-in-out;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $background-color;
+        opacity: 1;
+        transition: all .35s ease-in-out;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100vh;
+        height: 100vh;
+        background-color: darken($background-color, 10%);
+        opacity: .9;
+        transition: all .35s ease-in-out;
+    }
+    span {
+        position: relative;
+        display: block;
+        width: 60vh;
+        text-align: center;
+        cursor: pointer;
+    }
+    &--ux {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: all .35s ease-in-out;
+
+        &:before {
+            top: -60vh;
+            left: -25vh;
+            transform: rotate(-45deg);
+            opacity: 1;
+            background-color: $primary-color;
+            transition: all .35s ease-in-out;
+        }
+    }
+    &--ui {
+        bottom: 0;
+        right: 0;
+
+        &:before {
+            bottom: -60vh;
+            right: -25vh;
+            transform: rotate(45deg);
+            background-color: $main-color;
+            transition: all .35s ease-in-out;
+        }
+    }
+}
+.poe {
+    position: absolute;
+    bottom: -20vh;
+    width: 90vh;
+    height: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    opacity: .7;
+    transition: all .35s ease-in-out;
+
+    &--red,
+    &--blue,
+    &--color {
+        left: 0;
+        right: 0;
+        transition: all .35s ease-in-out;
+    }
+    &--red {
+        left: -1em;
+    }
+    &--blue,
+    &--color {
+        left: 1em;
+    }
+    &--color {
+        bottom: -3vh;
+        left: auto;
+        right: calc(50vw - (90vh / 2));
+        opacity: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

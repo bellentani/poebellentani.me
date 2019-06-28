@@ -16,18 +16,27 @@
     }}
     {{> head-scripts }}
   </head>
-  <body class="landing">
+  <body class="portfolio">
     <main>
       <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
       {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
 
-      <h1>Poe Bellentani</h1>
-      <p>UX/UI Designer & Frontend Developer</p>
-      <ul>
-        <li><small><a href="https://www.linkedin.com/in/bellentani/"><i class="fab fa-linkedin-in"></i> linkedin.com/in/bellentani/</a></small></li>
-        <li><small><a href="https://xd.adobe.com/view/d35d6a12-d577-43ee-7033-d3d89be95f2a-a56c/?fullscreen"><i class="fas fa-palette"></i> Temporary Portfolio</a></small></li>
-        <li><small><a href="https://github.com/bellentani"><i class="fab fa-github"></i> Github</a></small></li>
+      <ul class="list-unstyled">
+        <li>
+          <button href="" class="cta-cover cta-cover--ux">
+            <span>UX</span>
+          </button>
+        </li>
+        <li>
+          <button href="" class="cta-cover cta-cover--ui">
+            <span>UI</span>
+          </button>
+        </li>
       </ul>
+
+      <img src="/img/poe-lines-red.svg" alt="Poe Bellentani Red" class="poe poe--red">
+      <img src="/img/poe-lines-blue.svg" alt="Poe Bellentani Blue" class="poe poe--blue">
+      <img src="/img/poe-color.svg" alt="Poe Bellentani Blue" class="poe poe--color">
     </main>
     {{> footer-scripts }}
   </body>
