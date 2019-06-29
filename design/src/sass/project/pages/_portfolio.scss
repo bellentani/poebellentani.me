@@ -1,16 +1,24 @@
 .portfolio {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    background-color: $background-color;
-
-    ul {
+    &,
+    &--body {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        padding: 0;
         margin: 0;
+        background-color: $background-color;
+    }
+    .cover-buttons {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
     }
     .cta-cover {
+        z-index: 2;
+
         &--ui {
             bottom: 0;
             right: 0;
@@ -23,7 +31,18 @@
             }
         }
     }
-    &--ui {
+    .page-content {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        opacity: 0;
+    }
+    &--ui,
+    &--ux {
+        .cover-buttons {
+            z-index: 0;
+        }
+
         .poe {
             &--red,
             &--blue,
@@ -34,6 +53,10 @@
             &--blue {
                 opacity: 0;
             }
+        }
+    }
+    &--ui {
+        .poe {
             &--color {
                 right: -7rem;
                 bottom: -3rem;
@@ -69,21 +92,92 @@
                 }
             }
         }
+        .page-content {
+            &--ux {
+                opacity: 0;
+            }
+            &--ui {
+                opacity: 1;
+            }
+        }
+    }
+    &--ux {
+        .poe {
+            &--lines {
+                right: -7rem;
+                bottom: -10rem;
+                width: 105vh;
+                margin-right: 0;
+                opacity: .5;
+            }
+        }
+        .cta-cover {
+            &--ui {
+                height: 0;
+                top: -100vh;
+                left: 0;
+                opacity: 0;
+                transition: all .35s ease-in-out;
+
+                &:hover,
+                &:focus {
+                    opacity: 0;
+                }
+
+                &:before {
+                    top: -60vh;
+                    left: -25vh;
+                    opacity: 0;
+                    transform: rotate(-90deg);
+                    transition: all .35s ease-in-out;
+                }
+            }
+            &--ux {
+                top: -30vh;
+                right: 0;
+                left: calc(100vw - 40vh);
+    
+                &:before {
+                    bottom: -10vh;
+                    right: -40vh;
+                    transform: rotate(0deg);
+                    transition: all .35s ease-in-out;
+                }
+                span {
+                    opacity: 0;
+                }
+            }
+        }
+        .page-content {
+            &--ux {
+                opacity: 1;
+            }
+            &--ui {
+                opacity: 0;
+            }
+        }
     }
 }
 .cta-cover {
     display: block;
     position: absolute;
+    z-index: 1;
     font-weight: 700;
     font-size: 13em;
     color: $background-color;
-    border: 0;
-    box-shadow: none;
-    background-color: transparent;
     cursor: default !important;
     opacity: .9;
     transition: all .35s ease-in-out;
 
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border: 0;
+        box-shadow: none;
+        background-color: transparent;
+        outline: none;
+    }
     &:hover,
     &:focus {
         text-decoration: none;
@@ -118,7 +212,7 @@
             top: -60vh;
             left: -25vh;
             transform: rotate(-45deg);
-            opacity: 1;
+            opacity: .9;
             background-color: $primary-color;
             transition: all .35s ease-in-out;
         }
@@ -132,6 +226,7 @@
             right: -25vh;
             transform: rotate(45deg);
             background-color: $main-color;
+            opacity: .9;
             transition: all .35s ease-in-out;
         }
     }
@@ -161,12 +256,17 @@
     &--color {
         left: 1em;
     }
-    &--color {
+    &--color,
+    &--lines {
         bottom: -3vh;
         left: auto;
         right: calc(50vw - (90vh / 2));
         opacity: 0;
         margin-right: 0;
         margin-left: 0;
+    }
+    &--lines {
+        opacity: 0;
+        bottom: -20vh;
     }
 }
