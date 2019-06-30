@@ -13,20 +13,17 @@ var elBody = document.querySelector('body'); // const elUx = document.querySelec
 // }
 
 document.addEventListener('click', function (event) {
-  console.log('clique');
-
+  //console.log('clique');
   if (event.target.closest('[data-toggle-mod="ux"]')) {
     elBody.classList.add('portfolio--ux');
-    elBody.classList.remove('portfolio--ui');
-    console.log('clique ux', event.target);
+    elBody.classList.remove('portfolio--ui'); //console.log('clique ux', event.target);
   }
 
   ;
 
   if (event.target.closest('[data-toggle-mod="ui"]')) {
     elBody.classList.add('portfolio--ui');
-    elBody.classList.remove('portfolio--ux');
-    console.log('clique ui', event.target);
+    elBody.classList.remove('portfolio--ux'); //console.log('clique ui', event.target);
   }
 
   ;
@@ -36,6 +33,5 @@ document.addEventListener('click', function (event) {
     elBody.classList.remove('portfolio--ui');
   }
 
-  ;
-  event.preventDefault();
+  ; //event.preventDefault();
 }, false);
