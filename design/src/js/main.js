@@ -16,20 +16,20 @@ const elBody = document.querySelector('body');
 // }
 
 document.addEventListener('click', function (event) {
-  console.log('clique');
+  //console.log('clique');
   if (event.target.closest('[data-toggle-mod="ux"]')) {
     elBody.classList.add('portfolio--ux');
     elBody.classList.remove('portfolio--ui');
-    console.log('clique ux', event.target);
+    //console.log('clique ux', event.target);
   };
   if (event.target.closest('[data-toggle-mod="ui"]')) {
     elBody.classList.add('portfolio--ui');
     elBody.classList.remove('portfolio--ux');
-    console.log('clique ui', event.target);
+    //console.log('clique ui', event.target);
   };
   if (event.target.closest('[data-toggle-mod="close"]')) {
     elBody.classList.remove('portfolio--ux');
     elBody.classList.remove('portfolio--ui');
   };
-  event.preventDefault();
+  //event.preventDefault();
 }, false);
