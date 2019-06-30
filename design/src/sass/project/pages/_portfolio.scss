@@ -31,12 +31,6 @@
             }
         }
     }
-    .page-content {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        opacity: 0;
-    }
     &--ui,
     &--ux {
         .cover-buttons {
@@ -52,6 +46,18 @@
             &--red,
             &--blue {
                 opacity: 0;
+            }
+        }
+        .page-content {
+            .page-back {    
+                .fas {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    opacity: 1;
+                    transform: scale(1) rotate(0) translate(0);
+                    transition: $transition-default;
+                }
             }
         }
     }
@@ -95,9 +101,13 @@
         .page-content {
             &--ux {
                 opacity: 0;
+                transform: scale(0);
+                transition: $transition-default;
             }
             &--ui {
                 opacity: 1;
+                transform: scale(1);
+                transition: $transition-default;
             }
         }
     }
@@ -151,9 +161,13 @@
         .page-content {
             &--ux {
                 opacity: 1;
+                transform: scale(1);
+                transition: $transition-default;
             }
             &--ui {
                 opacity: 0;
+                transform: scale(0);
+                transition: $transition-default;
             }
         }
     }
@@ -194,6 +208,7 @@
         background-color: darken($background-color, 10%);
         opacity: .9;
         transition: all .35s ease-in-out;
+        cursor: pointer;
     }
     span {
         position: relative;
@@ -268,5 +283,98 @@
     &--lines {
         opacity: 0;
         bottom: -20vh;
+    }
+}
+
+.page-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-second;
+    opacity: 0;
+    box-sizing: border-box;
+    width: 50vw;
+    height: 100vh;
+    padding: 2rem 4rem;
+    transform: scale(0);
+    transition: $transition-default;
+
+    .page-back {
+        position: relative;
+        font-size: 4rem;
+        display: inline-block;
+
+        .fas {
+            position: relative;
+            top: -45vh;
+            left: -45vh;
+            opacity: 0;
+            transform: scale(10) rotate(90deg) translate(-20vh);
+            transition: $transition-default;
+        }
+    }
+    .title {
+        line-height: .9;
+        font-size: 6.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        b {
+            font-size: 2em;
+            font-weight: 700;
+        }
+    }
+    .go-to-other {
+        overflow: hidden;
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        text-indent: -100vw;
+        background-color: $base-dark;
+    }
+    &__header {
+        display: block;
+    }
+    &__list {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 4rem;
+
+        ul {
+            font-size: 2em;
+        }
+        a {
+            color: $primary-color;
+        }
+    }
+    &--ux {
+        .page-back {
+            color: $main-color;
+        }
+        .title {
+            color: $primary-color;
+        }
+        .go-to-other {
+            background-color: $main-color;
+        }
+        a {
+            color: $main-color;
+        }
+    }
+    &--ui {
+        .page-back {
+            color: $primary-color;
+        }
+        .title {
+            color: $main-color;
+        }
+        .go-to-other {
+            background-color: $primary-color;
+        }
+        a {
+            color: $primary-color;
+        }
     }
 }

@@ -17,15 +17,19 @@ const elBody = document.querySelector('body');
 
 document.addEventListener('click', function (event) {
   console.log('clique');
-  if (event.target.matches('[data-toggle-mod="ux"]') || event.target.matches('[data-toggle-mod="ux"] span')) {
+  if (event.target.closest('[data-toggle-mod="ux"]')) {
     elBody.classList.add('portfolio--ux');
     elBody.classList.remove('portfolio--ui');
-    console.log('clique ux');
+    console.log('clique ux', event.target);
   };
-  if (event.target.matches('[data-toggle-mod="ui"]') || event.target.matches('[data-toggle-mod="ui"] span')) {
+  if (event.target.closest('[data-toggle-mod="ui"]')) {
     elBody.classList.add('portfolio--ui');
     elBody.classList.remove('portfolio--ux');
-    console.log('clique ui');
+    console.log('clique ui', event.target);
+  };
+  if (event.target.closest('[data-toggle-mod="close"]')) {
+    elBody.classList.remove('portfolio--ux');
+    elBody.classList.remove('portfolio--ui');
   };
   event.preventDefault();
 }, false);

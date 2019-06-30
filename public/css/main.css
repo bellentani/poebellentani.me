@@ -19544,7 +19544,7 @@ body {
   }
 }
 
-.portfolio {
+.portfolio, .portfolio--body {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -19554,8 +19554,16 @@ body {
   background-color: #E8E8E8;
 }
 
-.portfolio ul {
+.portfolio .cover-buttons {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   margin: 0;
+  padding: 0;
+}
+
+.portfolio .cta-cover {
+  z-index: 2;
 }
 
 .portfolio .cta-cover--ui {
@@ -19570,11 +19578,22 @@ body {
   background-color: #0090DF;
 }
 
-.portfolio--ui .poe--red, .portfolio--ui .poe--blue, .portfolio--ui .poe--color {
+.portfolio .page-content {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  opacity: 0;
+}
+
+.portfolio--ui .cover-buttons, .portfolio--ux .cover-buttons {
+  z-index: 0;
+}
+
+.portfolio--ui .poe--red, .portfolio--ui .poe--blue, .portfolio--ui .poe--color, .portfolio--ux .poe--red, .portfolio--ux .poe--blue, .portfolio--ux .poe--color {
   transition: all .35s ease-in-out;
 }
 
-.portfolio--ui .poe--red, .portfolio--ui .poe--blue {
+.portfolio--ui .poe--red, .portfolio--ui .poe--blue, .portfolio--ux .poe--red, .portfolio--ux .poe--blue {
   opacity: 0;
 }
 
@@ -19613,18 +19632,84 @@ body {
   transition: all .35s ease-in-out;
 }
 
+.portfolio--ui .page-content--ux {
+  opacity: 0;
+}
+
+.portfolio--ui .page-content--ui {
+  opacity: 1;
+}
+
+.portfolio--ux .poe--lines {
+  right: -7rem;
+  bottom: -10rem;
+  width: 105vh;
+  margin-right: 0;
+  opacity: .5;
+}
+
+.portfolio--ux .cta-cover--ui {
+  height: 0;
+  top: -100vh;
+  left: 0;
+  opacity: 0;
+  transition: all .35s ease-in-out;
+}
+
+.portfolio--ux .cta-cover--ui:hover, .portfolio--ux .cta-cover--ui:focus {
+  opacity: 0;
+}
+
+.portfolio--ux .cta-cover--ui:before {
+  top: -60vh;
+  left: -25vh;
+  opacity: 0;
+  transform: rotate(-90deg);
+  transition: all .35s ease-in-out;
+}
+
+.portfolio--ux .cta-cover--ux {
+  top: -30vh;
+  right: 0;
+  left: calc(100vw - 40vh);
+}
+
+.portfolio--ux .cta-cover--ux:before {
+  bottom: -10vh;
+  right: -40vh;
+  transform: rotate(0deg);
+  transition: all .35s ease-in-out;
+}
+
+.portfolio--ux .cta-cover--ux span {
+  opacity: 0;
+}
+
+.portfolio--ux .page-content--ux {
+  opacity: 1;
+}
+
+.portfolio--ux .page-content--ui {
+  opacity: 0;
+}
+
 .cta-cover {
   display: block;
   position: absolute;
+  z-index: 1;
   font-weight: 700;
   font-size: 13em;
   color: #E8E8E8;
-  border: 0;
-  box-shadow: none;
-  background-color: transparent;
   cursor: default !important;
   opacity: .9;
   transition: all .35s ease-in-out;
+}
+
+.cta-cover, .cta-cover:hover, .cta-cover:focus, .cta-cover:active {
+  border: 0;
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
 }
 
 .cta-cover:hover, .cta-cover:focus {
@@ -19664,7 +19749,7 @@ body {
   top: -60vh;
   left: -25vh;
   transform: rotate(-45deg);
-  opacity: 1;
+  opacity: .9;
   background-color: #D9000D;
   transition: all .35s ease-in-out;
 }
@@ -19679,6 +19764,7 @@ body {
   right: -25vh;
   transform: rotate(45deg);
   background-color: #0090DF;
+  opacity: .9;
   transition: all .35s ease-in-out;
 }
 
@@ -19708,11 +19794,16 @@ body {
   left: 1em;
 }
 
-.poe--color {
+.poe--color, .poe--lines {
   bottom: -3vh;
   left: auto;
   right: calc(50vw - (90vh / 2));
   opacity: 0;
   margin-right: 0;
   margin-left: 0;
+}
+
+.poe--lines {
+  opacity: 0;
+  bottom: -20vh;
 }

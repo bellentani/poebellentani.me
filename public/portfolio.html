@@ -72,27 +72,43 @@
 </head>
 
 <body class="portfolio">
-    <main>
+    <main class="portfolio--body">
         <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP23W7C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
-        <ul class="list-unstyled">
+        <ul class="cover-buttons list-unstyled">
             <li>
-                <button href="" class="cta-cover cta-cover--ux">
+                <button class="cta-cover cta-cover--ux" data-toggle-mod="ux">
                     <span>UX</span>
                 </button>
             </li>
             <li>
-                <button href="" class="cta-cover cta-cover--ui">
+                <button class="cta-cover cta-cover--ui" data-toggle-mod="ui">
                     <span>UI</span>
                 </button>
             </li>
         </ul>
 
+        <div class="page-content page-content--ux">
+            <h2>Portfolio <b>UX</b></h2>
+            <ul>
+                <li><a href="#">UX #1: Adon</a></li>
+                <li><a href="#">UX #1: Adon</a></li>
+            </ul>
+        </div>
+        <div class="page-content page-content--ui">
+            <h2>Portfolio <b>UI</b></h2>
+            <ul>
+                <li><a href="#">UX #1: Adon</a></li>
+                <li><a href="#">UX #1: Adon</a></li>
+            </ul>
+        </div>
+
         <img src="/img/poe-lines-red.svg" alt="Poe Bellentani Red" class="poe poe--red">
         <img src="/img/poe-lines-blue.svg" alt="Poe Bellentani Blue" class="poe poe--blue">
+        <img src="/img/poe-lines-gray.svg" alt="Poe Bellentani Blue" class="poe poe--lines" data-toggle-mod="ux">
         <img src="/img/poe-color.svg" alt="Poe Bellentani Blue" class="poe poe--color">
     </main>
 
