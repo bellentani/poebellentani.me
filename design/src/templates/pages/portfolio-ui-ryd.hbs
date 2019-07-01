@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    {{> head-metatags
+          canonical="https://poebellentani.me/"
+          title="Poe Bellentani, UX/UI Design & Developer"
+          description="Geek, nerd, always amazed with the Internet possibilities, interface addicted (mobile to games, software to hardware, RL to Matrix) and a believer who wants learn more and more things through books and root websites (like W3C, O'Reilly books, Codeschool, Lynda.com and a lot of online sources)"
+          keywords="UX consultant, UI design, Design, UX consultoria, User Experience, Consultoria, Frontend Developer"
+          title-facebook="Poe Bellentani: UX/UI Designer & Frontend Developer"
+          image-itemprop="https://poebellentani.me/img/poebellentani.jpg"
+          image-facebook="https://poebellentani.me/img/og-image.jpg"
+          image-twitter="https://poebellentani.me/img/twitter-image.jpg"
+          author-url-facebook="https://www.facebook.com/poebellentani"
+          author-name="Poe Bellentani"
+          publisher-url-facebook="https://www.facebook.com/poebellentani"
+    }}
+    {{> head-scripts }}
+  </head>
+  <body class="portfolio portfolio--internal">
+    <main class="portfolio__body">
+      <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
+      {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
+      <article class="page-content page-content--ui">
+        <section class="page-content__section page-content__section--first">
+          <div class="page-content__header">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  {{!-- <a href="#" data-toggle-mod="close" class="page-back"><i class="fas fa-arrow-left"></i></a> --}}
+                  <h1 class="title">
+                    RYD Agro
+                  </h1>
+                  <div class="description">
+                    <p>A RYD é uma startup de Belém/PA com foco em leilões de ofertas de compra de comodities agrícolas. Fiz a Direção de Arte para desenvolvimento de logomarca e, em seguida, wireframes e fluxo navegacional, entregando um protótipo navegável para ser implementado pela equipe de desenvolvimento, juntamente com um UI KIT baseado em Google Material.</p>
+                  </div>
+                  <a href="#more-about" class="btn btn-outline-primary btn-lg">Ver mais <i class="fas fa-arrow-right"></i></a>
+                  <div class="go-home box-caller">
+                    <a href="portfolio.html#ui" class="title"><!-- se vier a hash com #ux ou #ui define o layout do "back" -->
+                      <i>Portfolio</i> <b>UI</b>
+                      <span class="go-to-other">UX</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="page-content__section page-content__section--image">
+            <div class="page-content__body">
+              <div class="page-content__body__image w-100 page-content__body__image--bg" data-image-replace>
+                <img src="/img/portfolio-ui-ryd.jpg" alt="RYD Agro" class="img-fluid">
+              </div>
+            </div>
+          </section>
+          <div id="more-about" class="page-content__body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-md-3 pb-4">
+                  <div class="page-content__image">
+                    <img src="/img/icon-ui-out-of.svg" alt="Problema" class="img-fluid">
+                  </div>
+                  <h2 class="title title--secondary">UI Guide</h2>
+                  <p>Como o requisito principal era acelerar o desenvolvimento do aplicativo, escolhemos o Material Design como base - personalizei a interface e apliquei modificações para ficar dentro do guia de utilização da marca.</p>
+                </div>
+                <div class="col-12 offset-md-1 col-md-3 pb-4">
+                  <div class="page-content__image">
+                    <img src="/img/icon-ui-design.svg" alt="Problema" class="img-fluid">
+                  </div>
+                  <h2 class="title title--secondary">Design do App</h2>
+                  <p>O aplicativo ganhou uma direção de arte baseada no UI Guide. Foi trabalhada a jornada dos usuários e os dois grandes grupos de personas: fluxos foram mapeados, o trabalho de UX desenvolvido e um protótipo entregue.</p>
+                </div>
+                <div class="col-12 offset-md-1 col-md-3 pb-4">
+                  <div class="page-content__image">
+                    <img src="/img/icon-ui-vision.svg" alt="Problema" class="img-fluid">
+                  </div>
+                  <h2 class="title title--secondary">Direção de Arte</h2>
+                  <p>Não só fizemos a parte online, mas criamos um guia de marca. O logotipo, inclusive, foi trabalhado pensando em aplicação digital e em como iria interagir juntamente com ícones de aplicativos, sites e identidades digitais.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-content__section page-content__section--details">
+          <div class="page-content__body">
+            <div class="page-content__body__image" data-image-replace>
+              <img src="/img/portfolio-ui-ryd-guide.jpg" alt="RYD Agro" class="img-fluid">
+            </div>
+            <div class="page-content__body__about">
+              <h2 class="title">UI Guide e Guia da marca</h2>
+              <p>Realizei levantamento de briefing junto ao cliente, estudos de marcas, anseios e trabalho de direção de arte junto a designer que desenvolveu o conceito do logo. O meu trabalho foi traduzir os anseios do cliente para que fosse desenvolvida uma marca coerente e aplicável em meios digitais.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Só aparece se for imagem full --> 
+        <section class="page-content__section page-content__section--details">
+          <div class="page-content__body">
+            <div class="page-content__body__image w-100 page-content__body__image--bg" data-image-replace>
+              <img src="/img/portfolio-ui-ryd-branding.jpg" alt="RYD Agro" class="img-fluid">
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    {{> footer-scripts }}
+  </body>
+</html>

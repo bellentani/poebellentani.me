@@ -4,5 +4,8 @@
 @import "project/variables";
 @import "project/mixins";
 @import "project/global";
+@import "project/atoms/typography";
+@import "project/atoms/buttons";
 
 @import "project/pages/portfolio";
+@import "project/organisms/portfolio-internal";

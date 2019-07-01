@@ -17,20 +17,20 @@
     {{> head-scripts }}
   </head>
   <body class="portfolio">
-    <main class="portfolio--body">
+    <main class="portfolio__body">
       <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
       {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
 
       <ul class="cover-buttons list-unstyled">
         <li>
-          <button class="cta-cover cta-cover--ux" data-toggle-mod="ux">
+          <a href="#ux" class="cta-cover cta-cover--ux" data-toggle-mod="ux">
             <span>UX</span>
-          </button>
+          </a>
         </li>
         <li>
-          <button class="cta-cover cta-cover--ui" data-toggle-mod="ui">
+          <a href="#ui" class="cta-cover cta-cover--ui" data-toggle-mod="ui">
             <span>UI</span>
-          </button>
+          </a>
         </li>
       </ul>
 
@@ -39,25 +39,25 @@
           <a href="#" data-toggle-mod="close" class="page-back"><i class="fas fa-arrow-left"></i></a>
           <h2 class="title">
             Portfolio <b>UX</b>
-            <a href="#" data-toggle-mod="ui" class="go-to-other">UI</a>
+            <a href="#ui" data-toggle-mod="ui" class="go-to-other">UI</a>
           </h2>
         </span>
         <div class="page-content__list">
           <ul class="list-unstyled">
             <li>
-              <a href="#">
+              <a href="portfolio-ux-innovatech.html">
                 <span>
-                  <strong>UX #1:</strong> Nome do Case
+                  <strong>UX #1:</strong> Innovatech
                 </span>
               </a>
             </li>
-            <li>
-              <a href="#">
+            {{!-- <li>
+              <a href="portfolio-model.html">
                 <span>
                   <strong>UX #2:</strong> Outro Nome de Case
                 </span>
               </a>
-            </li>
+            </li> --}}
           </ul>
         </div>
       </div>
@@ -66,25 +66,25 @@
           <a href="#" data-toggle-mod="close" class="page-back"><i class="fas fa-arrow-left"></i></a>
           <h2 class="title">
             Portfolio <b>UI</b>
-            <a href="#" data-toggle-mod="ux" class="go-to-other">UX</a>
+            <a href="#ux" data-toggle-mod="ux" class="go-to-other">UX</a>
           </h2>
         </span>
         <div class="page-content__list">
           <ul class="list-unstyled">
             <li>
-              <a href="#">
+              <a href="portfolio-ui-ryd.html">
                 <span>
-                  <strong>UI #1:</strong> Um case de UI
+                  <strong>UI #1:</strong> RYD Agro
                 </span>
               </a>
             </li>
-            <li>
-              <a href="#">
+            {{!-- <li>
+              <a href="portfolio-model.html">
                 <span>
                   <strong>UI #2:</strong> Outro case de UI
                 </span>
               </a>
-            </li>
+            </li> --}}
           </ul>
         </div>
       </div>

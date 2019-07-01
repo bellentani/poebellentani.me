@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    {{> head-metatags
+          canonical="https://poebellentani.me/"
+          title="Poe Bellentani, UX/UI Design & Developer"
+          description="Geek, nerd, always amazed with the Internet possibilities, interface addicted (mobile to games, software to hardware, RL to Matrix) and a believer who wants learn more and more things through books and root websites (like W3C, O'Reilly books, Codeschool, Lynda.com and a lot of online sources)"
+          keywords="UX consultant, UI design, Design, UX consultoria, User Experience, Consultoria, Frontend Developer"
+          title-facebook="Poe Bellentani: UX/UI Designer & Frontend Developer"
+          image-itemprop="https://poebellentani.me/img/poebellentani.jpg"
+          image-facebook="https://poebellentani.me/img/og-image.jpg"
+          image-twitter="https://poebellentani.me/img/twitter-image.jpg"
+          author-url-facebook="https://www.facebook.com/poebellentani"
+          author-name="Poe Bellentani"
+          publisher-url-facebook="https://www.facebook.com/poebellentani"
+    }}
+    {{> head-scripts }}
+  </head>
+  <body class="portfolio portfolio--internal">
+    <main class="portfolio__body">
+      <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
+      {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
+      <article class="page-content page-content--ux">
+        <section class="page-content__section">
+          <div class="page-content__header">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  {{!-- <a href="#" data-toggle-mod="close" class="page-back"><i class="fas fa-arrow-left"></i></a> --}}
+                  <h1 class="title">
+                    Innovatech
+                  </h1>
+                  <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, atque quaerat facere illo quod repellat natus maiores adipisci, dolores possimus velit praesentium voluptatum illum, recusandae accusamus! Similique tempora culpa dolor!</p>
+                  </div>
+                  <a href="#more-about" class="btn btn-outline-primary btn-lg">Ver mais <i class="fas fa-arrow-right"></i></a>
+                  <div class="go-home box-caller">
+                    <a href="portfolio.html#ux" class="title"><!-- se vier a hash com #ux ou #ui define o layout do "back" -->
+                      <i>Portfolio</i> <b>UX</b>
+                      <span class="go-to-other">UI</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-content__body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-md-3 pb-4">
+                  <div class="page-content__image">
+                    <img src="/img/icon-brain.svg" alt="Problema" class="img-fluid">
+                  </div>
+                  <h2 class="title title--secondary">Problema</h2>
+                  <p>A empresa queria desenvolver um modelo de negócio para captação de leads e comprovação de autoridade em sua área de atuação.</p>
+                </div>
+                <div class="col-12 offset-md-1 col-md-3 pb-4">
+                  <div class="page-content__image">
+                    <img src="/img/icon-transform.svg" alt="Problema" class="img-fluid">
+                  </div>
+                  <h2 class="title title--secondary">Solução proposta</h2>
+                  <p>A criação de um MVP para validação da ideia e do modelo de negócios - que ainda estava imaturo e precisava de testes para validar sua lucratividade.</p>
+                </div>
+                <div class="col-12 offset-md-1 col-md-3 pb-4">
+                  <div class="page-content__image">
+                    <img src="/img/icon-think-big.svg" alt="Problema" class="img-fluid">
+                  </div>
+                  <h2 class="title title--secondary">Resultado</h2>
+                  <p>Indentificou-se o cenário, mas o produto teve que ser revisto. Aprendeu-se muito com testes e validações com o MVP e o produto voltou para a prancheta.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="more-about" class="page-content__section page-content__section--details">
+          <div class="page-content__body">
+            <div class="page-content__body__image" data-image-replace>
+              <img src="/img/portfolio-ux-innovatech.jpg" alt="Innovatech" class="img-fluid">
+            </div>
+            <div class="page-content__body__about">
+              <h2 class="title">Produto em andamento</h2>
+              <p>Com as lições aprendidas na primeira interação, optou-se por pivotagem do modelo de negócios e o trabalho foi reiniciado, desde a concepção de uma nova regra de negócios até a restruturação do projeto.</p>
+              <p>O mais legal é que o aprendizado, as personas e os fluxos de usuário continuaram como base para outras iniciativas da empresa.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Só aparece se for imagem full --> 
+        {{!-- <section class="page-content__section page-content__section--details">
+          <div class="page-content__body">
+            <div class="page-content__body__image w-100 page-content__body__image--bg" data-image-replace>
+              <img src="/img/portfolio-ux-adon.jpg" alt="Innovatech" class="img-fluid">
+            </div>
+          </div>
+        </section> --}}
+      </article>
+    </main>
+    {{> footer-scripts }}
+  </body>
+</html>
