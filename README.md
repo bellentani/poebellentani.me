@@ -4,6 +4,8 @@ Hy, that's my portfolio. I made this website to show my Design and Code skills. 
 
 I'll work a lot more on this site, is my playground and sandbox now. :D
 
+https://poebellentani.me
+
 ## The Process
 
 The design was made on Adobe XD. After the first mockup I tested with some people and get feedback from usability issues. With a list of issues I started the programing, fixing the problems identified directly at the code. 
@@ -30,6 +32,6 @@ Some itens at my roadmap:
 
 * Acessibility issues: targeting get a 100% acessibility using WAI and ARIA recomendations;
 * Put more content on my portfolio
-* Setup a dymanic contact form at home (index.html) to avoid the necessity to open the client to send a email to me
+* Setup a dynamic contact form at home (index.html) to avoid the necessity to open the client to send a email to me
 
 
