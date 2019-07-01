@@ -11,7 +11,7 @@ The design was made on Adobe XD. After the first mockup I tested with some peopl
 Focusing on mobile and performance, I made some improvements on the page structures and change the contend flow. The structure for the portfolio are 2 pages, a COVER and a INTERNAL. Internal pages are templates with modifiers and controllers made on Javascript. 
 
 
-##More Info
+## More Info
 
 This site use: 
 
