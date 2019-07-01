@@ -8,7 +8,7 @@ https://poebellentani.me
 
 ## The Process
 
-The design was made on Adobe XD. After the first mockup I tested with some people and get feedback from usability issues. With a list of issues I started the programing, fixing the problems identified directly at the code. 
+The design was made on Adobe XD. After the first mockup I tested with some people and get feedback from usability issues. With a list of issues I started the programing and fixed the problems identified directly at the code. 
 
 Focusing on mobile and performance, I made some improvements on the page structures and change the contend flow. The structure for the portfolio are 2 pages, a COVER and a INTERNAL. Internal pages are templates with modifiers and controllers made on Javascript. 
 
@@ -24,7 +24,7 @@ This site use:
 
 This site WILL use: 
 
-* Node.js serving a Express aplications with Handlebars
+* Node.js serving a Express aplication with Handlebars
 * Firebase to add a dynamic layer (the content will be update by a little CMS)
 * Angular and React in some pages to show my expertise
 
