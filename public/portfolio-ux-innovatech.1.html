@@ -71,22 +71,78 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body class="landing">
-    <main>
+<body class="portfolio portfolio--internal">
+    <main class="portfolio__body">
         <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP23W7C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-
-        <h1>Poe Bellentani</h1>
-        <p>UX/UI Designer & Frontend Developer</p>
-        <ul>
-            <li><small><a href="https://www.linkedin.com/in/bellentani/"><i class="fab fa-linkedin-in"></i> linkedin.com/in/bellentani/</a></small></li>
-            <li><small><a href="https://xd.adobe.com/view/d35d6a12-d577-43ee-7033-d3d89be95f2a-a56c/?fullscreen"><i class="fas fa-palette"></i>Portfolio (made in Adobe XD)</a></small></li>
-            <li><small><a href="/portfolio.html"><i class="fas fa-code"></i>Portfolio (coded, HTML - Work in Progress)</a></small></li>
-            <li><small><a href="https://github.com/bellentani"><i class="fab fa-github"></i> Github</a></small></li>
-            <li><small><a href="mailto:hello@poebellentani.me"><i class="fas fa-envelope"></i> hello@poebellentani.me</a></small></li>
-        </ul>
+        <article class="page-content page-content--ux">
+            <section class="page-content__section">
+                <div class="page-content__header">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="title">
+                                    Innovatech
+                                </h1>
+                                <div class="description">
+                                    <p>Auxiliei no entendimento da ideia, desenhamos as proto-personas, aplicamos metodologias de Design Thinking e moldamos o negócio para o cliente. </p>
+                                </div>
+                                <a href="#more-about" class="btn btn-outline-primary btn-lg">Ver mais <i class="fas fa-arrow-right"></i></a>
+                                <div class="go-home box-caller">
+                                    <a href="portfolio.html#ux" class="title">
+                                        <!-- se vier a hash com #ux ou #ui define o layout do "back" -->
+                                        <i>Portfolio</i> <b>UI</b>
+                                        <span class="go-to-other">UX</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content__body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-md-3 pb-4">
+                                <div class="page-content__image">
+                                    <img src="/img/icon-brain.svg" alt="Problema" class="img-fluid">
+                                </div>
+                                <h2 class="title title--secondary">Problema</h2>
+                                <p>A empresa queria desenvolver um modelo de negócio para captação de leads e comprovação de autoridade em sua área de atuação.</p>
+                            </div>
+                            <div class="col-12 offset-md-1 col-md-3 pb-4">
+                                <div class="page-content__image">
+                                    <img src="/img/icon-transform.svg" alt="Problema" class="img-fluid">
+                                </div>
+                                <h2 class="title title--secondary">Solução proposta</h2>
+                                <p>A criação de um MVP para validação da ideia e do modelo de negócios - que ainda estava imaturo e precisava de testes para validar sua lucratividade.</p>
+                            </div>
+                            <div class="col-12 offset-md-1 col-md-3 pb-4">
+                                <div class="page-content__image">
+                                    <img src="/img/icon-think-big.svg" alt="Problema" class="img-fluid">
+                                </div>
+                                <h2 class="title title--secondary">Resultado</h2>
+                                <p>Indentificou-se o cenário, mas o produto teve que ser revisto. Aprendeu-se muito com testes e validações com o MVP e o produto voltou para a prancheta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="more-about" class="page-content__section page-content__section--details">
+                <div class="page-content__body">
+                    <div class="page-content__body__image" data-image-replace>
+                        <img src="/img/portfolio-ux-innovatech.jpg" alt="Innovatech" class="img-fluid">
+                    </div>
+                    <div class="page-content__body__about">
+                        <h2 class="title">Produto em andamento</h2>
+                        <p>Com as lições aprendidas na primeira interação, optou-se por pivotagem do modelo de negócios e o trabalho foi reiniciado, desde a concepção de uma nova regra de negócios até a restruturação do projeto.</p>
+                        <p>O mais legal é que o aprendizado, as personas e os fluxos de usuário continuaram como base para outras iniciativas da empresa.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Só aparece se for imagem full -->
+        </article>
     </main>
 
     <!-- build:js js/poebellentani.js -->
