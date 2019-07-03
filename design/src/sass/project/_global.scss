@@ -113,3 +113,41 @@ body {
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
 }
+
+.oculos-mask {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+
+  .poe-image {
+    width: 100%;
+    height: auto;
+  }
+  .poe-oculos,
+  .oculos-lentes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .oculos-lentes {
+    clip-path: url("#mask");
+    
+    video {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      overflow: hidden;
+      mask-image: url("/img/oculos-lentes.svg");
+      mask-repeat: no-repeat;
+      mask-size: 350px;
+      mask-position: center;
+    }
+  }
+}

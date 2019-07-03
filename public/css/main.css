@@ -19548,6 +19548,46 @@ body {
   }
 }
 
+.oculos-mask {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.oculos-mask .poe-image {
+  width: 100%;
+  height: auto;
+}
+
+.oculos-mask .poe-oculos,
+.oculos-mask .oculos-lentes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.oculos-mask .oculos-lentes {
+  clip-path: url("#mask");
+}
+
+.oculos-mask .oculos-lentes video {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  overflow: hidden;
+  mask-image: url("/img/oculos-lentes.svg");
+  mask-repeat: no-repeat;
+  mask-size: 350px;
+  mask-position: center;
+}
+
 .btn {
   border-radius: 100vw;
   padding-right: 1.5em;
@@ -19629,6 +19669,30 @@ body {
   width: 110vh;
   margin-right: 0;
   opacity: 1;
+}
+
+.portfolio--ui .poe--color img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio--ui .poe .oculos-lentes {
+  position: relative;
+}
+
+.portfolio--ui .poe .oculos-lentes video {
+  position: absolute;
+  top: -10.3vh;
+  left: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  mask-image: url("/img/oculos-lentes.svg");
+  mask-repeat: no-repeat;
+  mask-size: 41.4vh;
+  mask-position: center;
 }
 
 .portfolio--ui .cta-cover--ux {

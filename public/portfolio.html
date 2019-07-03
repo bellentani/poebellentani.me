@@ -72,11 +72,11 @@
 </head>
 
 <body class="portfolio">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP23W7C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <main class="portfolio__body">
         <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP23W7C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
 
         <ul class="cover-buttons list-unstyled">
             <li>
@@ -135,10 +135,19 @@
         <img src="/img/poe-lines-red.svg" alt="Poe Bellentani Red" class="poe poe--red">
         <img src="/img/poe-lines-blue.svg" alt="Poe Bellentani Blue" class="poe poe--blue">
         <img src="/img/poe-lines-gray.svg" alt="Poe Bellentani Blue" class="poe poe--lines">
-        <img src="/img/poe-color.svg" alt="Poe Bellentani Blue" class="poe poe--color">
+        <div class="poe poe--color">
+            <div class="oculos-lentes">
+                <video id="video" autoplay="autoplay" muted="muted" preload="auto" loop="loop">
+                    <source src="/video/04.mp4" type="video/mp4">
+                </video>
+                <img src="/img/poe-color.svg" alt="Poe Bellentani Blue">
+            </div>
+        </div>
     </main>
 
-    <script src="js/poebellentani.js"></script>
+    <!-- build:js js/poebellentani.js -->
+    <script src="/js/main.js"></script>
+    <!-- endbuild -->
 
 </body>
 

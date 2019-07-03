@@ -17,9 +17,9 @@
     {{> head-scripts }}
   </head>
   <body class="portfolio">
+    {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
     <main class="portfolio__body">
       <a id="home" href="javascript.void(0)" class="main-anchor" aria-label="Início do Site"></a>
-      {{> body-scripts }} {{!-- Não usar para nada que não seja o Tagmanager --}}
 
       <ul class="cover-buttons list-unstyled">
         <li>
@@ -92,7 +92,15 @@
       <img src="/img/poe-lines-red.svg" alt="Poe Bellentani Red" class="poe poe--red">
       <img src="/img/poe-lines-blue.svg" alt="Poe Bellentani Blue" class="poe poe--blue">
       <img src="/img/poe-lines-gray.svg" alt="Poe Bellentani Blue" class="poe poe--lines">
-      <img src="/img/poe-color.svg" alt="Poe Bellentani Blue" class="poe poe--color">
+      <div class="poe poe--color">
+        <div class="oculos-lentes">
+          <video id="video" autoplay="autoplay" muted="muted" preload="auto" loop="loop">
+            <source src="/video/04.mp4" type="video/mp4">
+            {{!-- <source src="http://mazwai.com/system/posts/videos/000/000/123/webm/victor_ciurus--5d_mark_iii_magic_lantern_14_bits_raw_video.webm?1412890624" type="video/webm"> --}}
+          </video>
+          <img src="/img/poe-color.svg" alt="Poe Bellentani Blue">
+        </div>
+      </div>
     </main>
     {{> footer-scripts }}
   </body>
