@@ -78,6 +78,35 @@
                 width: 110vh;
                 margin-right: 0;
                 opacity: 1;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .oculos-lentes {
+                //clip-path: url("#mask");
+                position: relative;
+                
+                video {
+                    position: absolute;
+                    top: -10.3vh;
+                    left: 0%;
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: 100%;
+                    height: auto;
+                    //z-index: -1;
+                    overflow: hidden;
+                    mask-image: url("/img/oculos-lentes.svg");
+                    mask-repeat: no-repeat;
+                    mask-size: 41.4vh;
+                    mask-position: center;
+
+                    @supports (-ms-ime-align:auto) {
+                        display: none;
+                    }
+                }
             }
         }
         .cta-cover {

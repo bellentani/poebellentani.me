@@ -10,7 +10,7 @@ https://poebellentani.me
 
 The design was made on Adobe XD. After the first mockup I tested with some people and get feedback from usability issues. With a list of issues I started the programing and fixed the problems identified directly at the code. 
 
-Focusing on mobile and performance, I made some improvements on the page structures and change the contend flow. The structure for the portfolio are 2 pages, a COVER and a INTERNAL. Internal pages are templates with modifiers and controllers made on Javascript. 
+Focusing on mobile and performance, I made some improvements on the page structures and change the contend flow. The structure for the portfolio are 2 pages, a COVER and a INTERNAL. Internal pages are templates with modifiers and controllers made with pure Javascript. 
 
 
 ## More Info
@@ -18,7 +18,7 @@ Focusing on mobile and performance, I made some improvements on the page structu
 This site use: 
 
 * Node.js to serve statics pages
-* Digital Ocean instance
+* Digital Ocean VPS instance
 * A lot of domain redirects and security setup (SSL keys and some Nginx configurations)
 * Gulp.js to render static pages
 
@@ -27,11 +27,13 @@ This site WILL use:
 * Node.js serving a Express aplication with Handlebars
 * Firebase to add a dynamic layer (the content will be update by a little CMS)
 * Angular and React in some pages to show my expertise
+* Ghost CMS to "blog.poebellentani.me" 
 
 Some itens at my roadmap: 
 
 * Acessibility issues: targeting get a 100% acessibility using WAI and ARIA recomendations;
 * Put more content on my portfolio
+* Blog about UX (in Portuguese for now)
 * Setup a dynamic contact form at home (index.html) to avoid the necessity to open the client to send a email to me
 
 

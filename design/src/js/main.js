@@ -75,3 +75,7 @@ function setBgImg(i) {
   // }
 }
 //setBgImg(imageBg);
+
+let varEnter = "Poe";
+let varTest = `Teste do ${varEnter}`;
+console.log(varTest);
