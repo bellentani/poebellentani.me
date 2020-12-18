@@ -102,6 +102,10 @@
                     mask-repeat: no-repeat;
                     mask-size: 41.4vh;
                     mask-position: center;
+
+                    @supports (-ms-ime-align:auto) {
+                        display: none;
+                    }
                 }
             }
         }

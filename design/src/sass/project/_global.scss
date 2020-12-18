@@ -151,3 +151,35 @@ body {
     }
   }
 }
+
+//CSS test
+.button {
+  display: inline-block;
+  background: $main-color;
+  color: $base-light;
+  min-width: 8em;
+  display: inline-block;
+  padding: .5em 3em;
+  border-radius: 23em;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Poppins, "Open Sans", sans;
+  margin: 1rem;
+  text-align: center;
+
+  &--lg {
+    font-size: 1.2rem;
+  }
+  &--sm {
+    font-size: .8rem;
+  }
+  &--xs {
+    padding: .25em 1em;
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+  &--block {
+    display: block;
+    padding: .75em 3em;
+  }
+}

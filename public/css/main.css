@@ -19695,6 +19695,12 @@ body {
   mask-position: center;
 }
 
+@supports (-ms-ime-align: auto) {
+  .portfolio--ui .poe .oculos-lentes video {
+    display: none;
+  }
+}
+
 .portfolio--ui .cta-cover--ux {
   top: -100vh;
   left: 0;
