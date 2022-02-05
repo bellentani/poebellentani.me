@@ -18,7 +18,7 @@ const htmlbeautify = require('gulp-html-beautify');
 const useref = require('gulp-useref');
 const gulpIf = require('gulp-if');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
+// const imagemin = require('gulp-imagemin');
 // const webpack = require("webpack");
 // const webpackconfig = require("./webpack.config.js");
 // const webpackstream = require("webpack-stream");
@@ -139,11 +139,11 @@ function copyFiles(done) {
   done();
 }
 
-function imgSquash() {
-  return gulp.src(path.src.img+"/**/*.{png,jpg,gif,svg,ico}")
-  .pipe(imagemin())
-  .pipe(gulp.dest(path.dist.img+"/"));
-}
+// function imgSquash() {
+//   return gulp.src(path.src.img+"/**/*.{png,jpg,gif,svg,ico}")
+//   .pipe(imagemin())
+//   .pipe(gulp.dest(path.dist.img+"/"));
+// }
 
 function deployStatic(done) {
   gulp.src([
@@ -263,7 +263,7 @@ function watchFiles() {
   ], copyFiles);
 
   
-  gulp.watch(path.src.img+'/**/*.{png,jpg,gif,svg,ico}', imgSquash);
+  //gulp.watch(path.src.img+'/**/*.{png,jpg,gif,svg,ico}', imgSquash);
 
   //global watch
   gulp.watch(
@@ -284,7 +284,8 @@ function watchFiles() {
 
 // define complex tasks
 const js = gulp.series(scriptsLint, scripts);
-const build = gulp.series(clean, gulp.parallel(imgSquash, css, hbs, js, copyFiles));
+//const build = gulp.series(clean, gulp.parallel(imgSquash, css, hbs, js, copyFiles));
+const build = gulp.series(clean, gulp.parallel(css, hbs, js, copyFiles));
 const watch = gulp.series(build, gulp.parallel(watchFiles, assetsBundle, browserSync));
 
 // export tasks
@@ -298,5 +299,5 @@ exports.clean = clean;
 exports.build = build;
 exports.deploy = deployStatic;
 exports.watch = watch;
-exports.imgSquash = imgSquash;
+//exports.imgSquash = imgSquash;
 exports.default = watch;
