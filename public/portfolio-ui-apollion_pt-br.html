@@ -89,14 +89,6 @@
                                 <div class="description">
                                     <p>De 2020 até janeiro de 2022 trabalhei exclusivamente para a Captalys e com algumas atuações paralelas com aulas - para a Prodevs ou com conteúdo para o meu canal no Youtube.</p>
                                     <p>Nesse período me envolvi muito com a ideia de Design em Escala, portanto, atuei com a estruturação de um Design System do zero, desde suas premissas até a sua linguagem de Design - o foco do trabalho foi, em grande parte, nas formas de se distribuir isso para outros Designers (Design Ops & Tooling) e também em como integrarmos com o time de Engenharia os padrões desenhados.</p>
-                                    <p>No começo, lá no primeiro trimestre de 2020, muito do trabalho foi entender os requisitos e para onde iríamos seguir com os trabalhos para a escala de Design de Interfaces. Havia a necessidade de um Design System e também de padrões para uma plataforma modular para a criação de produtos “White Label”.</p>
-                                    <p>Com esse entendimento inicial realizado conseguimos projetar toda a linguagem visual do Design System para o desenvolvimento posterior dos Design Tokens, bem como estruturamos as premissas para a evolução do mesmo.</p>
-                                    <p>O Design System, chamado Apollion, evoluiu então de forma orgânica para atender as necessidades de negócio, dividindo sua evolução entre entendimento de Design e entregas para o time de Engenharia.</p>
-                                    <p>Até Agosto de 2021 ele foi feito assim. A partir dessa data, iniciamos um processo de reestruturação dos Design Tokens e da camada de consumo dos mesmos pelo time de Engenharia, com o objetivo de criar uma camada de temificação em formato de API (chamamos de DS Theme API) para que pudéssemos aumentar a capacidade de criação de layouts e atender necessidades de mercado - os clientes da empresa precisavam de mais opções de personalização.</p>
-                                    <p>Esse projeto teve início com a criação de uma camada de consumo de Design Tokens mais robusta utilizando o Style Dictionary, mas gerou um impacto no time de Design System Ops apra que fizéssemos os componentes para atender essa reestruturação.</p>
-                                    <p>Também passamos a definir mais claramente o que eram estruturas de componentes e sua anatomia com propriedades mais claras (Component API) e representadas dentro das bibliotecas de Design (dentro do Figma) para melhoria dos handoffs.</p>
-                                    <p>Em paralelo a essas alterações iniciamos também um trabalho de mapeamento de conteúdo, com o intuito de permitir que os clientes também pudessem personalizar texto para atender suas modulações de voz no discurso de cada marca - esse trabalho se iniciou no Apollion mas acabou se estendendo ao Jovian, onde criou uma estrutura de arquivos JSON muito similares aos Design Tokens, mas que poderiam ser associadas a coleções de dados alimentadas por uma API de um Headless CMS. O importante nesse trabalho de conteúdo foi a orquestração e organização do conteúdo com uma visão de Arquitetura de Informação aliada a estruturas que pudessem alimentar diretamente a plataforma de crédito através de atributos de conteúdo presentes em repositórios e componentes.</p>
-                                    <p>Em 2022 foi iniciado um trabalho de refatoração de todos os componentes do Apollion e suas bibliotecas específicas de produto.</p>
                                 </div>
                                 <a href="#more-about" class="btn btn-outline-primary btn-lg">Ver mais <i class="fas fa-arrow-right"></i></a>
                                 <div class="go-home box-caller">
@@ -146,12 +138,64 @@
             </section>
             <section class="page-content__section page-content__section--details">
                 <div class="page-content__body">
+                    <div class="page-content__body__about">
+                        <h2 class="title">Fase 1: Definições iniciais</h2>
+                        <h4><strong>Quando?</strong> Primeiro semestre de 2020</h4>
+                        <p>No começo, lá no primeiro trimestre de 2020, muito do trabalho foi entender os requisitos e para onde iríamos seguir com os trabalhos para a escala de Design de Interfaces. Havia a necessidade de um Design System e também de padrões para uma plataforma modular para a criação de produtos “White Label”.</p>
+                        <p>Com esse entendimento inicial realizado conseguimos projetar toda a linguagem visual do Design System para o desenvolvimento posterior dos Design Tokens, bem como estruturamos as premissas para a evolução do mesmo.</p>
+                        <p>O Design System, chamado Apollion, evoluiu então de forma orgânica para atender as necessidades de negócio, dividindo sua evolução entre entendimento de Design e entregas para o time de Engenharia.</p>
+                        <ul>
+                            <li>Desenhamos as estruturas iniciais de linguagem de design e os primeiros Design Tokens, definindo regras de composição para cores, espaçamento, tipografia, sombras e todos os elementos relacionados;</li>
+                            <li>Determinamos as regras e processos iniciais para um Design System Multi-marcas e White Label;</li>
+                            <li>Orquestramos a distribuição e divisão dos ativos de Design através de bibliotecas dentro do Figma e como seriam distribuídos para a utilização;</li>
+                            <li>Aplicamos a linguagem gráfica e as primeiras versões dos componentes em Designs que forma implementados nas plataformas de crédito da empresa;</li>
+                            <li>Criação das Premissas de Design para a evolução da área de Design de Interfaces na empresa;</li>
+                            <li>Início da Documentação do Design System no Confluence.</li>
+                        </ul>
+                    </div>
+                    <div class="page-content__body__image" data-image-replace>
+                        <img src="/img/portfolio-ui-ryd-guide.jpg" alt="RYD Agro" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+            <section class="page-content__section page-content__section--details">
+                <div class="page-content__body">
                     <div class="page-content__body__image" data-image-replace>
                         <img src="/img/portfolio-ui-ryd-guide.jpg" alt="RYD Agro" class="img-fluid">
                     </div>
                     <div class="page-content__body__about">
-                        <h2 class="title">UI Guide e Guia da marca</h2>
-                        <p>Realizei levantamento de briefing junto ao cliente, estudos de marcas, anseios e trabalho de direção de arte junto a designer que desenvolveu o conceito do logo. O meu trabalho foi traduzir os anseios do cliente para que fosse desenvolvida uma marca coerente e aplicável em meios digitais.</p>
+                        <h2 class="title">Fase 2: Entregas versão estável e definições gerais de Design</h2>
+                        <h4><strong>Quando?</strong>  Segundo semestre de 2020 até o Junho de 2021</h4>
+                        <p>Até Agosto de 2021 ele foi feito assim. A partir dessa data, iniciamos um processo de reestruturação dos Design Tokens e da camada de consumo dos mesmos pelo time de Engenharia, com o objetivo de criar uma camada de temificação em formato de API (chamamos de DS Theme API) para que pudéssemos aumentar a capacidade de criação de layouts e atender necessidades de mercado - os clientes da empresa precisavam de mais opções de personalização.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="page-content__section page-content__section--details">
+                <div class="page-content__body">
+                    <div class="page-content__body__about">
+                        <h2 class="title">Fase 3: Restruturação e alinhamento final entre Design e Engenharia</h2>
+                        <h4><strong>Quando?</strong>  Segundo semestre de 2021</h4>
+                        <p>Esse fase do projeto teve início com a criação de uma camada de consumo de Design Tokens mais robusta utilizando o Style Dictionary, mas gerou um impacto no time de Design System Ops apra que fizéssemos os componentes para atender essa reestruturação.</p>
+                        <p>Também passamos a definir mais claramente o que eram estruturas de componentes e sua anatomia com propriedades mais claras (Component API) e representadas dentro das bibliotecas de Design (dentro do Figma) para melhoria dos handoffs.</p>
+                        <p>Em paralelo a essas alterações iniciamos também um trabalho de mapeamento de conteúdo, com o intuito de permitir que os clientes também pudessem personalizar texto para atender suas modulações de voz no discurso de cada marca - esse trabalho se iniciou no Apollion mas acabou se estendendo a plataforma, onde criou uma estrutura de arquivos JSON muito similares aos Design Tokens, mas que poderiam ser associadas a coleções de dados alimentadas por uma API de um Headless CMS.</p>
+                        <p>O importante nesse trabalho de conteúdo foi a orquestração e organização do conteúdo com uma visão de Arquitetura de Informação aliada a estruturas que pudessem alimentar diretamente a plataforma de crédito através de atributos de conteúdo presentes em repositórios e componentes.
+                        </p>
+                    </div>
+                    <div class="page-content__body__image" data-image-replace>
+                        <img src="/img/portfolio-ui-ryd-guide.jpg" alt="RYD Agro" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+            <section class="page-content__section page-content__section--details">
+                <div class="page-content__body">
+                    <div class="page-content__body__image" data-image-replace>
+                        <img src="/img/portfolio-ui-ryd-guide.jpg" alt="RYD Agro" class="img-fluid">
+                    </div>
+                    <div class="page-content__body__about">
+                        <h2 class="title">Fase 4: Evolução e entrega de uma versão estável multiplataforma</h2>
+                        <h4><strong>Quando?</strong>  Primeiro trimestre de 2022</h4>
+                        <p>Em 2022 iniciamos um trabalho de refatoração de todos os componentes do Apollion e suas bibliotecas específicas de produto. A ideia era permitir que o DS fosse utilizado por várias plataformas, descentralizando os times de Design para permitir maior liberdade e velocidade na produção.</p>
+                        <p>Realizamos um trabalho de levantamento de nova estrutura de Design Tokens bem como as bibliotecas que deveriam estar prontas em uma camada de Webcomponents até o final do primeiro semestre de 2022 para que pudéssemos aumentar a produtividade de nossos times - descentralizar a estrutura de consumo para Design e Engenharia.</p>
                     </div>
                 </div>
             </section>
