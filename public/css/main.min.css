@@ -41,3 +41,8 @@
         order: 2;
     }
 }
+@media (min-width: 1440px) {
+    .portfolio--internal .page-content .description {
+        max-width: 60vw;
+    }
+}
